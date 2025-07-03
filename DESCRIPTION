@@ -1,0 +1,23 @@
+Type: Package
+Package: Canon
+Title: Casual relationship identification using one sample instrumental variable model
+Version: 1.0
+Date: 2025-07-02
+Authors@R: c(
+    person("Peijun", "Wu", , "pekjoonw@umich.edu", role = c("aut", "cre")),
+    person("Xiang", "Zhou", role = "aut")
+  )
+Description: Canon is a a one-sample IV analysis method specifically tailored to systematically identify genes that are potentially causally influenced by perturbed target genes across diverse sc-CRISPR platforms.
+License: GPL (>= 3)
+Imports: 
+    Rcpp (>= 1.0.12),
+    RcppArmadillo (>= 0.12.8.3.0),
+    RcppDist (>= 0.1.1)
+Suggests: 
+    tinytest
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo,
+    RcppDist
+Encoding: UTF-8
+RoxygenNote: 7.3.1
