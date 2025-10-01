@@ -19,6 +19,7 @@ library(Canon)
 ###
 ## Simulate gRNA matrix, exposure gene expression and outcome gene expression
 ###
+library(MASS)
 set.seed(2025)
 n <- 10000
 p <- 100
