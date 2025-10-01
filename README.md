@@ -36,19 +36,22 @@ simulate_matrix <- function(n, p, max_ones = 3) {
   mat
 }
 
-grna_mat <- simulate_matrix(n, p)
+grna_mat <- scale(simulate_matrix(n, p))
 beta <- rep(0, p)
 true_idx <- sample(1:p, round(p * 0.3), replace = F)
 beta[true_idx] <- rnorm(length(true_idx), 0, sqrt(0.025/length(true_idx)))
+beta_off <- rep(0, p)
+beta_off[true_idx] <- rnorm(length(true_idx), 0, sqrt(0.005/length(true_idx)))
+
 
 ## calcualte the alpha value
-alpha <- 0.3
+alpha <- sqrt(1e-3/0.025)
 
 ## Simulate the random errors and data
-sigma <- matrix(c(1 - 0.025, 0.15 * (sqrt(1 - 0.025) * sqrt(1 - 1e-3)), 
-          0.15 * (sqrt(1 - 0.025) * sqrt(1 - 1e-3)), 1 - 1e-3), 2, 2)
+sigma <- matrix(c(1 - 0.025, 0.15 * (sqrt(1 - 0.025) * sqrt(1 - 1e-3 - 0.005)), 
+          0.15 * (sqrt(1 - 0.025) * sqrt(1 - 1e-3 - 0.005)), 1 - 1e-3), 2, 2)
 dat <- do.call(rbind, lapply(1:n, function(x) {
-  mu <- matrix(c(grna_mat[x, ] %*% beta, grna_mat[x, ] %*% beta * alpha), 2, 1)
+  mu <- matrix(c(grna_mat[x, ] %*% beta, grna_mat[x, ] %*% beta * alpha + grna_mat[x, ] %*% beta_off), 2, 1)
   bvn1 <- mvrnorm(1, mu = mu, Sigma = sigma)
   return(bvn1)
 }))
@@ -61,5 +64,5 @@ y <- dat[, 2]
 ###
 results <- run_Canon(x_expression = as.matrix(x), 
                         y_expression = as.matrix(y), gRNA = grna_mat,
-                        Gibbsnumber = 2000)
+                        Gibbsnumber = 1000)
 ```
