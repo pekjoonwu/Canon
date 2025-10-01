@@ -63,7 +63,7 @@ run_Canon(
 \item{verbose}{whether to print out the fitting process}
 }
 \value{
-A list of estimated parameters including the p values for the causal effect test
+A list of estimated parameters where the main parameters are the causal effect estimate (causal_effect) and corresponding p-value (causal_pvalue) 
 }
 \description{
 Canon is able to model an initial set of candidate gRNAs
