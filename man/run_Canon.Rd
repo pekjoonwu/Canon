@@ -34,7 +34,7 @@ run_Canon(
 
 \item{Gibbsnumber}{the number of Gibbs sampling iterations with the default to be 3000}
 
-\item{burninproportion}{the proportion to burn in from Gibbs sampling iterations, with default to be 20%}
+\item{burninproportion}{the proportion to burn in from Gibbs sampling iterations, with default to be 20 percent}
 
 \item{pi_beta_shape}{the prior shape parameter for pi_beta with the default to be 0.7}
 
