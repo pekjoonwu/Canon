@@ -6,7 +6,7 @@
 #' @param y_expression the gene expression for the outcome gene
 #' @param gRNA the gRNA matrix
 #' @param Gibbsnumber the number of Gibbs sampling iterations with the default to be 3000
-#' @param burninproportion  the proportion to burn in from Gibbs sampling iterations, with default to be 20%  
+#' @param burninproportion  the proportion to burn in from Gibbs sampling iterations, with default to be 20%% 
 #' @param pi_beta_shape the prior shape parameter for pi_beta with the default to be 0.7
 #' @param pi_beta_scale the prior scale parameter for pi_beta with the default to be 0.7
 #' @param a_beta the prior parameter for sigma_beta2 with the default to be 21
@@ -20,7 +20,7 @@
 #' @param sigma_df the degree of freedom in the inverse wishart prior for covariance matrix
 #' @param off_target whether the algorithm is using a model with off target effects
 #' @param verbose whether to print out the fitting process
-#' @return A list of estimated parameters including the p values for the causal effect test 
+#' @return A list of estimated parameters where the main parameters are the causal effect estimate (causal_effect) and corresponding p-value (causal_pvalue)  
 
 run_Canon <- function(x_expression = NULL, y_expression = NULL, 
                                     gRNA = NULL, Gibbsnumber = 3000, burninproportion = 0.2, 
