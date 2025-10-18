@@ -1,5 +1,5 @@
 # Canon (CAsual relationship identificatioN using ONe sample instrumental variable model)
-![scheme](https://github.com/pekjoonwu/Canon/blob/master/overview.pdf)
+![scheme](https://github.com/pekjoonwu/Canon/blob/master/overview.png)
 
 <p align="justify">
 
