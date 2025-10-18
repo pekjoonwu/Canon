@@ -6,6 +6,7 @@
 A critical analytical task in sc-CRISPR screening is identifying downstream genes influenced by perturbed target genes. Existing methods for this task primarily rely on traditional association- based analyses, which not only fall short in establishing causal relationships but also suffer from high false positive rates and limited statistical power. To overcome these limitations, we introduce a novel causal inference based framework that leverages the perturbation status of gRNAs in single cells as instrumental variables (IVs) to infer causal gene relationship via IV analysis. Building upon this framework, we further present Canon, a one-sample IV analysis method specifically tailored to systematically identify genes that are potentially causally influenced by perturbed target genes across diverse sc-CRISPR platforms. Canon ensures robust type I error control while maintaining high statistical power. We evaluated its performance through comprehensive simulations and real data applications. The gene-gene relationships identified by Canon provide valuable insights into the causal gene regulatory network, uncovering novel therapeutic targets for cancer treatment and demonstrating the transformative potential of sc-CRISPR screening to resolve causal networks at an unprecedented scale.
 
 </p>
+
 ## Installation
 To install the latest version of the Canon package from GitHub, run the following code in R:
 ```
