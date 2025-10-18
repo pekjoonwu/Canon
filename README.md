@@ -1,5 +1,5 @@
 # Canon (CAsual relationship identificatioN using ONe sample instrumental variable model)
-![scheme](https://drive.google.com/uc?export=view&id=1y0ElMXXt1ClH-B4jHhnTz87vezlPKtPR)
+![scheme](https://github.com/pekjoonwu/Canon/blob/master/overview.pdf)
 
 <p align="justify">
 
@@ -23,9 +23,8 @@ library(Canon)
 ```
 
 ## Detailed Tutorial
-```
-See [Tutorial](https://pekjoonwu.github.io/Canon-analysis/index.html) for detailed documentation and examples.
-```
+See [Tutorial](https://pekjoonwu.github.io/Canon-analysis/) for detailed documentation and examples.
+
 
 ## Simple Usage Example
 ```
